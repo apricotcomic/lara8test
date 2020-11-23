@@ -18,7 +18,7 @@ use App\Http\Controllers\TestinputController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -27,6 +27,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('menu/menu', [MenuController::class, 'menu'])->name('menu');
 
-Route::resource('testinput', TestinputController::class);
+Route::resource('testinput', TestinputController::class)->middleware('auth');
 
 Route::get('secret', [MenuController::class, 'secret'])->name('secret');

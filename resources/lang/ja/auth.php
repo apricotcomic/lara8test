@@ -13,8 +13,9 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'whoops' => 'Whoops!Something went wrong.',
+    'failed' => '入力されたユーザーは登録されていませんよ',
+    'throttle' => 'エラー回数が規定値を超えました。しばらくしてからまた来てね',
+    'whoops' => 'やべ！エラーあるよ',
+
 
 ];
